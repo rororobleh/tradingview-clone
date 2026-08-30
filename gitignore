@@ -1,0 +1,11 @@
+node_modules/
+dist/
+build/
+*.log
+.DS_Store
+
+# Données locales générées par l'app (fichiers récents, workspace sauvegardé)
+# — main.js les écrit dans app.getPath('userData'), pas dans le dossier du projet,
+# mais on l'ignore ici par précaution si jamais quelqu'un teste avec une config locale.
+recent-files.json
+workspace.json
