@@ -1,0 +1,37 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.tradingviewclone.app
+productName: TradingView Clone
+files:
+  - filter:
+      - main.js
+      - preload.js
+      - renderer/**/*
+      - index.html
+      - csvWorker.js
+      - aggWorker.js
+      - package.json
+      - node_modules/**/*
+      - data/**/*
+win:
+  target:
+    - target: portable
+      arch:
+        - x64
+    - nsis
+  icon: build/icon.ico
+portable:
+  artifactName: TradingView-Clone-Portable.exe
+mac:
+  target:
+    - dmg
+  category: public.app-category.finance
+  icon: build/icon.icns
+linux:
+  target:
+    - AppImage
+    - deb
+  category: Finance
+  icon: build/icon.png
+electronVersion: 43.4.1
